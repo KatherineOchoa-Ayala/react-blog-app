@@ -27,6 +27,7 @@ nav a:hover {
 }
 
 main {
+  width: 100%;
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
@@ -102,6 +103,7 @@ footer {
 }
 
 #contact {
+  width: 90%;
   max-width: 900px;
   margin: 30px auto;
   padding: 30px;
