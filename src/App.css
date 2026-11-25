@@ -85,7 +85,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: auto;
 }
 
 #about {
@@ -335,4 +335,11 @@ footer {
   object-fit: contain;
   display: block;
   margin: 0 auto 15px;
+}
+
+/* app layout */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

@@ -11,7 +11,7 @@ import HomePage from "./pages/HomePage.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="app-layout">
       <Header />
 
       <Routes>
