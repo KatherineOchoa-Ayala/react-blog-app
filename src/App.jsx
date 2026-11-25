@@ -5,6 +5,9 @@ import BlogPostsPage from "./pages/BlogPostsPage";
 import IndividualPostPage from "./pages/IndividualPostPage";
 import ContactPage from "./pages/ContactPage";
 import "./App.css";
+import LoginPage from "./pages/LoginPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
   return (
@@ -12,7 +15,16 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<BlogPostsPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/blog"
+          element={
+            <ProtectedRoute>
+              <BlogPostsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/post/:id" element={<IndividualPostPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <p>© 2026 My Blog. All rights reserved.</p>
+            <p>© 2026 Beans Blog. All rights reserved.</p>
         </footer>
     )
 }

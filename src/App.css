@@ -1,5 +1,5 @@
 header {
-  background-color: #315b83;
+  background-color: #49382E;
   color: white;
   padding: 25px;
   text-align: center;
@@ -62,7 +62,7 @@ main {
 }
 
 .comments button {
-  background-color: #f4b400;
+  background-color: #49382E;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -72,7 +72,7 @@ main {
 }
 
 .comments button:hover {
-  background-color: #d99e00;
+  background-color: #705443;
 }
 
 .comments ul {
@@ -81,7 +81,7 @@ main {
 }
 
 footer {
-  background-color: #315b83;
+  background-color: #49382E;
   color: white;
   text-align: center;
   padding: 20px;
@@ -146,7 +146,7 @@ footer {
 }
 
 #contact button {
-  background-color: #315b83;
+  background-color: #49382E;
   color: white;
   padding: 12px;
   border: none;
@@ -156,7 +156,7 @@ footer {
 }
 
 #contact button:hover {
-  background-color: #244766;
+  background-color: #705443;
 }
 
 .comments form {
@@ -186,4 +186,153 @@ footer {
   border-radius: 8px;
   list-style: none;
   line-height: 1.6;
+}
+
+/* Login Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 30px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form button {
+  background-color: #49382E;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #705443;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.login-form h1,
+.login-form p {
+  margin:0;
+}
+
+.login-form input {
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.login-form label {
+  font-weight: 600;
+}
+
+/* Home-page */
+
+.home-page {
+  background-color: #F7F1E8;
+  color: #49382E;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.login-btn,
+.explore-btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #49382E;
+  color: white;
+}
+
+.explore-btn {
+  border: 2px solid #49382E;
+  color: #49382E;
+}
+
+.home-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 220px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px #00000010;
+}
+
+/* Coffee Image */
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* feature image */
+.feature-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
 }

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "../context/AuthContext.jsx";
+import { Link } from "react-router";
 
 function Comments({ postId }) {
     const [name, setName] = useState('');
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
     const [error, setError] = useState("");
+    const { isAuthenticated } = useAuth();
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
@@ -66,29 +69,32 @@ function Comments({ postId }) {
             <h2>Comments</h2>
             {error && <p role="alert">{error}</p>}
 
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="commentName">Name:</label>
-                <input
-                    type="text"
-                    id="commentName"
-                    placeholder="Enter your name"
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
-                    required
-                />
+            {isAuthenticated ? (
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="commentName">Name:</label>
+                    <input
+                        type="text"
+                        id="commentName"
+                        placeholder="Enter your name"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                        required
+                    />
                 
-                <label htmlFor="commentText">Comment:</label>
-                <textarea
-                    id="commentText"
-                    name="comment"
-                    placeholder="Add a comment"
-                    value={comment}
-                    onChange={(event) => setComment(event.target.value)}
-                />
+                    <label htmlFor="commentText">Comment:</label>
+                    <textarea
+                        id="commentText"
+                        name="comment"
+                        placeholder="Add a comment"
+                        value={comment}
+                        onChange={(event) => setComment(event.target.value)}
+                    />
 
-                <button type="submit">Submit</button>
-            </form>
-
+                    <button type="submit">Submit</button>
+                </form>
+            ) : (
+                <p>Please <Link to="/login">log in</Link> to leave a comment.</p>
+            )}
             <h3>Existing Comments:</h3>
             {comments.length === 0 ? (
                 <p>No comments yet. Be the first to comment!</p>
